@@ -6,11 +6,12 @@ class Player {
   int pontoDeVida;
   String nome;
 
-  Player(String n, int ptsDeVida , float posicaoInicialX , float posicaoInicialY){
+  Player(String n, int ptsDeVida , float posicaoInicialX , float posicaoInicialY , int forcaBase){
     nome = n;
     pontoDeVida = ptsDeVida;
     posicaoX = posicaoInicialX;
     posicaoY = posicaoInicialY;
+    forca = forcaBase;
   }
   
   void mover(float posX , float posY){

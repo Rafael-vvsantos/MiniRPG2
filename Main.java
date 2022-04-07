@@ -3,18 +3,18 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
     int dano = 0; 
-    Player player1 = new Player("Biú" , 100 , 10 , 10);
-    Arma arma1 = new Arma(01 , 10);
+    //Arma arma1 = new Arma(01 , 10);
+    Player player1 = new Player("Biú" , 100 , 10 , 10 , 30);
+    Arma arma1 = new Arma(01 , 10);//colocar antes do player1
     player1.receberArma(arma1);
     
     String playerStatus = player1.exibirStatus();
     System.out.println(playerStatus);
 
-    Monstro monstro1 = new Monstro("Gatinho Manhoso" , 10, 10);
-    dano = player1.causarDano();
+    Monstro monstro1 = new Monstro("Gatinho Manhoso" , 10, 10);// fazer sem contrutor colocar o monstro1.
+    //dano = player1.causarDano();
     
-    monstro1.receberDano(dano);
-    
+    monstro1.receberDano(/*dano*/player1.causarDano());
   }
 }
 
@@ -44,3 +44,13 @@ class Main {
 
     System.out.println("Situação do jogador: \n" + player.exibirStatus());
   }*/
+
+/*Instancia é todo objeto*/
+/*Assinutura do metodo, declaração do metedo
+classe > metedos > estruturas
+Manutençã em aninhamento é complexa*/
+
+/*while(monstro.pontosDeVida > 0 ){
+  monstro1.receberDano(player1.causarDano())
+  system.out,println("Vida monstro :" + monstro1.pontosDeVida) 
+}*/
